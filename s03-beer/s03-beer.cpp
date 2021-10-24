@@ -19,6 +19,11 @@ auto main(int argc, const char* argv[]) -> int
 
 		int N = stoi(argv[1]);
 
+		if (N < 1)
+		{
+			throw logic_error{ "Podana liczba musi być większa od 0" };
+		}
+
 		for (int i = N; i >= 1; )
 		{
 			cout << i << " bottles of beer on the wall, " << i << " bottles of beer." << endl;
