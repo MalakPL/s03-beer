@@ -24,13 +24,46 @@ auto main(int argc, const char* argv[]) -> int
 			throw logic_error{ "Podana liczba musi być większa od 0" };
 		}
 
+
 		for (int i = N; i >= 1; )
 		{
-			cout << i << " bottles of beer on the wall, " << i << " bottles of beer." << endl;
-			cout << "Take one down, pass it arround, "<< --i <<" bottles of beer on the wall..." << endl;
+			cout << i;
+			if (i == 1)
+			{
+				cout << " bottle";
+			}
+			else 
+			{
+				cout << " bottles";
+			}
+
+			cout << " of beer on the wall, " << i;
+			
+			if (i == 1)
+			{
+				cout << " bottle";
+			}
+			else
+			{
+				cout << " bottles";
+			}
+
+			cout << " of beer." << endl;
+			cout << "Take one down, pass it arround, ";
+
+			if (--i == 0)
+			{
+				cout << "no more bottle";
+			}
+			else 
+			{
+				cout << i << " bottles";
+			}
+			
+			cout << " of beer on the wall. " << endl;
 		}
 
-		cout << "No more bottles of beer on the wall, no more bottles of beer." << endl;
+		cout << "No more bottles of beer on the wall, no more bottles of beer. " << endl;
 		cout << "Go to the store and buy some more, " << N << " bottles of beer on the wall..." << endl;
 
 		return 0;
