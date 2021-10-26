@@ -27,38 +27,25 @@ auto main(int argc, const char* argv[]) -> int
 
 		for (int i = N; i >= 1; )
 		{
-			cout << i;
-			if (i == 1)
-			{
-				cout << " bottle";
-			}
-			else 
-			{
-				cout << " bottles";
-			}
+			cout << i << " ";
+			cout << ((i <= 1) ? "bottle" : "bottles");
 
-			cout << " of beer on the wall, " << i;
-			
-			if (i == 1)
-			{
-				cout << " bottle";
-			}
-			else
-			{
-				cout << " bottles";
-			}
+			cout << " of beer on the wall, " << i << " ";
+			cout << ((i <= 1) ? "bottle" : "bottles");
 
 			cout << " of beer." << endl;
 			cout << "Take one down, pass it arround, ";
 
 			if (--i == 0)
 			{
-				cout << "no more bottle";
+				cout << "no more ";
 			}
 			else 
 			{
-				cout << i << " bottles";
+				cout << i << " ";
 			}
+
+			cout << ((i <= 1) ? "bottle" : "bottles");
 			
 			cout << " of beer on the wall. " << endl;
 		}
